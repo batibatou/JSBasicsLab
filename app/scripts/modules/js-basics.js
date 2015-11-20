@@ -21,8 +21,13 @@
     };
 
     JS_BASICS.reverseString = function(str) {
-        return esrever.reverse(str);
-
+        var word='';
+        for(var i = str.length-1; i >= 0; i-- ){
+         word = word.concat(str.charAt(i));
+        }
+        return word;
+        // str will be an string
+        // Return a new string who's characters are in the opposite order to str's.
     };
 
     JS_BASICS.isPalindrome = function(str)
@@ -40,7 +45,10 @@
             myReturn = JS_BASICS.reverseString(str);
         }
         return myReturn == str;
-    };
+
+    // str will be an string
+    // Return true if it is a palindrome and false otherwise. It should be case insensitive and not consider space or punctuation.
+};
 
     JS_BASICS.nestedSum = function(arr)
     {
